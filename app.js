@@ -6,7 +6,13 @@ const mongoose = require("mongoose");
 const session = require("express-session");
 const MongoDBStore = require("connect-mongodb-session")(session);
 const multer = require("multer");
+const dotenv = require("dotenv")
 
+
+dotenv.config();
+
+const MONGODB_URL = process.env.URL;
+PORT = process.env.PORT  || 3000;
 
 
 const app = express();
